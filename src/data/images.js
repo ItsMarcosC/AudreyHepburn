@@ -22,7 +22,7 @@ const bloodlineCover = 'https://i.imgur.com/C5Xf4PWm.jpg';
 const laughedCover = 'https://i.imgur.com/LH9CyVqm.jpg';
 const alwaysCover = 'https://i.imgur.com/zN06uGSm.jpg';
 
-// Import Cover images for books
+// Import Cover images for books about Audrey Hepburn
 const warriorAudreyCover = 'https://i.imgur.com/bf3NnuBm.jpg';
 const dutchGirlCover = 'https://i.imgur.com/jOVkdrpm.jpg';
 const enchantmentCover = 'https://i.imgur.com/ngNzHD4m.jpg';
@@ -46,10 +46,25 @@ const lifeInPicturesCover = 'https://i.imgur.com/P2S54Ohm.jpg';
 const audreyTreasuresCover = 'https://i.imgur.com/Llq4Uq0m.jpg';
 const littleBookCover = 'https://i.imgur.com/i51fgRHm.jpg';
 
+// Import Cover Images for books of Audrey Hepburn Personal Readlist
+const diaryAnneCover = 'https://i.imgur.com/IoavVuVm.jpg';
+const secretGardenCover = 'https://i.imgur.com/WsUVlZjm.jpg';
+const jungleBookCover = 'https://i.imgur.com/6eXCUkEm.jpg';
+const fourMenCover = 'https://i.imgur.com/GqjXa8am.jpg';
+const mindOfJGCover = 'https://i.imgur.com/F74ARq0m.jpg';
+const greatImpersonationCover = 'https://i.imgur.com/kgytXHYm.jpg';
+const pygmalionCover = 'https://i.imgur.com/CtNUgqPm.jpg';
+const cocktailPartyCover = 'https://i.imgur.com/eY9uBmjm.jpg';
+const heidiCover = 'https://i.imgur.com/HVR1YMVm.jpg';
+const romeoAndJulietCover = 'https://i.imgur.com/6CEIwlGm.jpg?1';
+const hamletCover = 'https://i.imgur.com/j9pbSEEm.jpg';
+const tamingShrewCover = 'https://i.imgur.com/RaQvI9im.jpg';
+
 module.exports = { alwaysCover, laughedCover, bloodlineCover, robinMarianCover, waitDarkCover, twoForRoadCover, 
 tiffanyCover, monteCarloCover, romanHolidayCover, sabrinaCover, warAndPeaceCover, loveAfternoonCover, funnyFaceCover, 
 greenMansionsCover, nunStoryCover, unforgivenCover, secretPeopleCover, stealMillionCover, myFairLadyCover, parisWhenCover,
 charadeCover, childrenHourCover, warriorAudreyCover, enchantmentCover, dutchGirlCover, audreyAtHomeCover, audreyFiftiesCover,
 audreyInHatsCover, elegantSpiritCover, bioAudreyHepburnCover, beLovelyCover, littleAudreyCover, littleBookCover, fifthAvenueCover,
 charmedLifeCover, portraitsIconCover, fashionLoveCover, timelessLessonsCover, hepburnCookbookCover, fanPhenomenaCover,
-herStoryCover, soAudreyCover, lifeInPicturesCover, audreyTreasuresCover }
+herStoryCover, soAudreyCover, lifeInPicturesCover, audreyTreasuresCover, diaryAnneCover, secretGardenCover, jungleBookCover, fourMenCover,
+mindOfJGCover, greatImpersonationCover, pygmalionCover, cocktailPartyCover, heidiCover, romeoAndJulietCover, hamletCover, tamingShrewCover }
