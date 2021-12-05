@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <img src={data.movies[10].cover} alt="" />
       <img src={data.movies[9].cover} alt="" />
+      <img src={data.movies[4].cover} alt="" />
       {console.log(data.books)}
     </div>
   );
