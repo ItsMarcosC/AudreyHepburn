@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# AudreyHepburn
+Project Audrey Hepburn
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Summary:
+Intro...
+Details...
+  Data...
 
-## Available Scripts
 
-In the project directory, you can run:
+Data Folder
 
-### `npm start`
+This folder contains all the data used on the project, since there is no API on the internet all data was researched and added manually. For easier navigation
+and eventual changes it is divided in several files, each with one specific destination and function, so the page loads only the necessary information to not risk 
+losing performance (for example, the Movies page doesn't need to load all the info from Books). As a general rule "data_..." are the documents imported to the 
+Components. 
+Files descriptions are:
+  *(data_movies.js) : This file is used to feed the component of Movies, the structure is composed by objects with key/value pair. It is imported to the Component, 
+and is the only file needed to render all the movies information, it receives data from (movies_text.js) and (images.js).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  *(movies_text.js) : This file contains all the long texts necessary for (data_movies.js) to work, and has the main function of keeping clarity, since long texts 
+would make the structure hard to read and change if it was all put inside (data_movies.js).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  *(data_books_about.js) : This file is used to feed the component of Books About Audrey, the structure is composed by objects with key/value pair. It is imported 
+to the Component, and is the only file needed to render all the information on books about Audrey, it receives data from (aboutAudrey_text.js) and (images.js).
 
-### `npm test`
+  *(aboutAudrey_text.js) : This file contains all the long texts and links necessary for (data_books_about.js) to work, also has the function of keeping clarity,
+with the added importance of hosting links, so it is even more important to have easy access in case it breaks and needs to be replaced.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  *(data_books_herReadlist.js) : This file is used to feed the component of Audrey's Readlist, the structure is composed by objects with key/value pair. It is 
+imported to the Component, and is the only file needed to render all the information Audrey's readlist, it receives data from (herReadlist_text.js) and 
+(images.js). The reason why it's separated from the Books About Audrey is the same for detaching Movies, it is rendered on a different component and the 
+performance is better if it's info is loaded only when it is needed.
 
-### `npm run build`
+  *(herReadlist_text.js) : This file contains all the long texts and links necessary for (data_books_herReadlist.js) to work, also has the function of keeping 
+clarity, with the added importance of hosting links, so it is even more important to have easy access in case it breaks and needs to be replaced.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  *(images.js) : This file contains all the image links used on the project, since image links are much shorter than texts and the number of images is not too
+big, it was not necessary to split the links in different files, making it more complex to identify and find the correct file that had the link address. It is 
+imported by every (data_...) file and also imported directly to Components that use images.
