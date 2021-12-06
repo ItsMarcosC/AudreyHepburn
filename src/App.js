@@ -1,14 +1,21 @@
+// Import React and CSS
+import React, { useState, useEffect } from 'react';
+import { Switch, Route } from 'react-router-dom'
 import './App.css';
-const data = require ('./data/data_movies')
+
+// Import Components and Pages
+import Home from './pages/Home'
+import Movie from './pages/Movie';
+
 
 function App() {
   return (
-    <div className="App">
-      <img src={data.movies[10].cover} alt="" />
-      <img src={data.movies[9].cover} alt="" />
-      <img src={data.movies[4].cover} alt="" />
-      {console.log(data.books)}
-    </div>
+    <>
+      <Switch>
+        <Route path="/movie" component={Movie}/>
+        <Route exact path="/" component={Home}/>
+      </Switch>
+    </>
   );
 }
 
