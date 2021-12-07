@@ -7,11 +7,13 @@ import './App.css';
 import Home from './pages/Home'
 import Movie from './pages/Movie';
 import NotFound from './pages/404';
+import Nav from './components/Nav'
 
 
 function App() {
   return (
     <>
+      <Nav />
       <Switch>
         <Route path="/movie" component={Movie}/>
         <Route exact path="/" component={Home}/>
