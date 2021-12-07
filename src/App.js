@@ -6,6 +6,7 @@ import './App.css';
 // Import Components and Pages
 import Home from './pages/Home'
 import Movie from './pages/Movie';
+import NotFound from './pages/404';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Switch>
         <Route path="/movie" component={Movie}/>
         <Route exact path="/" component={Home}/>
+        <Route path="*" component={NotFound}/>
       </Switch>
     </>
   );
