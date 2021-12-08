@@ -1,7 +1,7 @@
 // Import React and CSS
 import React, { useState, useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom'
-import './App.css';
+import './style/App.css';
 
 // Import Components and Pages
 import Home from './pages/Home'
