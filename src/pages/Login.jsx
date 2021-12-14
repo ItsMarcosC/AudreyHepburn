@@ -1,15 +1,54 @@
-import React from "react";
-import Form from '../components/Form'
+import React, { useState } from 'react';
+import  { Redirect } from 'react-router-dom'
+import InvalidLogin from '../components/InvalidLogin';
 
-const Login = ({profileInfo, setProfileInfo, isLogged, toggleLogged}) => {
+const Login = ({loginInfo, isLogged, toggleLogged}) => {
+  const [typedInfo, setTypedInfo] = useState({ login:'', password:'' });
+  const [validInfo, toggleValidInfo] = useState(true);
+  
+  const onChangeHandle = ({target}) => {
+    const {name, value} = target;
+    setTypedInfo({
+        ...typedInfo,
+        [name]: value
+    })
+  }
+  
+  const submitButtonHandler = (e) => {
+    e.preventDefault();
+    if (typedInfo.login === loginInfo.login && typedInfo.password === loginInfo.password) {
+      toggleLogged(true);
+    } else {
+      toggleValidInfo(false);
+    }
+    setTypedInfo({
+      login: '',
+      password: '',
+    });
+  };
+
   switch(isLogged) {
     case true:
-      return  <h2>ESTOU LOGADA</h2>
+      return  <Redirect to="/"/>
     default:
-      return <Form 
-        profileInfo={profileInfo}
-        setProfileInfo={setProfileInfo}
-      />
+      return ( 
+        <div>
+          <form>
+            <label htmlFor="login"> Login:
+              <input type="text" id="login" name="login" onChange={onChangeHandle} value={typedInfo.login} placeholder={`(Use 'Audrey' to enter)`} />
+            </label>
+
+            <label htmlFor="password"> Password:
+              <input type="text" id="password" name="password" onChange={onChangeHandle} value={typedInfo.password} placeholder={`(Use 'Hepburn' to enter)`} />
+            </label>
+            
+            <button type="submit" onClick={submitButtonHandler} >
+              Sign in  
+            </button>
+          </form>
+          { validInfo ? '' : <InvalidLogin /> }
+        </div>
+      );
   }
 }
 

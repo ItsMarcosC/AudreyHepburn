@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react';
+import  { Redirect } from 'react-router-dom';
 
-function Home() {
+const Home = ({isLogged}) => {
   return (
     <div className="App">
-      <h1>Home Page</h1>
+      { isLogged ? <h1>Home Page</h1> : <Redirect to="/login"/>}
     </div>
   );
 }
