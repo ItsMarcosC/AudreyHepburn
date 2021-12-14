@@ -1,7 +1,7 @@
 const dataImage = require ('./images');
 const bookText = require ('./herReadlist_text');
 
-module.exports = {
+const AudreyReadlist = {
   fromAudreyReadlist : [
     {
       title: 'The Diary of a Young Girl',
@@ -125,3 +125,5 @@ module.exports = {
     },
   ],
 }
+
+export default AudreyReadlist;

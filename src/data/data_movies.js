@@ -1,7 +1,7 @@
 const dataText = require ('./movies_text');
 const dataImage = require ('./images');
 
-module.exports = { 
+const AudreyMovies = { 
   profile : {
       stageName: 'Audrey Hepburn',
       birthName: 'Audrey Kathleen Ruston',
@@ -211,3 +211,5 @@ module.exports = {
     }
   ],
 }
+
+export default AudreyMovies;

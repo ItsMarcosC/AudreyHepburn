@@ -60,7 +60,7 @@ const romeoAndJulietCover = 'https://i.imgur.com/6CEIwlGm.jpg?1';
 const hamletCover = 'https://i.imgur.com/j9pbSEEm.jpg';
 const tamingShrewCover = 'https://i.imgur.com/RaQvI9im.jpg';
 
-module.exports = { alwaysCover, laughedCover, bloodlineCover, robinMarianCover, waitDarkCover, twoForRoadCover, 
+export { alwaysCover, laughedCover, bloodlineCover, robinMarianCover, waitDarkCover, twoForRoadCover, 
 tiffanyCover, monteCarloCover, romanHolidayCover, sabrinaCover, warAndPeaceCover, loveAfternoonCover, funnyFaceCover, 
 greenMansionsCover, nunStoryCover, unforgivenCover, secretPeopleCover, stealMillionCover, myFairLadyCover, parisWhenCover,
 charadeCover, childrenHourCover, warriorAudreyCover, enchantmentCover, dutchGirlCover, audreyAtHomeCover, audreyFiftiesCover,

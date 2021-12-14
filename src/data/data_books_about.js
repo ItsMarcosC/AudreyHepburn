@@ -1,7 +1,7 @@
 const dataImage = require ('./images');
 const bookText = require ('./aboutAudrey_text');
 
-module.exports = {
+const AudreyBooks = {
   booksAboutAudrey : [ 
     {
       title: 'Warrior: Audrey Hepburn',
@@ -225,3 +225,5 @@ module.exports = {
     },
   ],
 }
+
+export default AudreyBooks;
