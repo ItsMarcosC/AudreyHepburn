@@ -7,7 +7,7 @@ import AudreyMovies from '../data/data_movies';
 import Movie from '../components/Movie';
 import MovieDetails from './MovieDetails';
 
-const Movies = ({isLogged}) => {
+const Movies = ({isLogged, setFavorites, favorites}) => {
   const [renderDetails, toggleRenderDetails] = useState(false);
   const [movieOnDisplay, setMovieOnDisplay] = useState('');
   const { movies } = AudreyMovies;
@@ -26,6 +26,8 @@ const Movies = ({isLogged}) => {
               cover={movie.cover}
               toggleRenderDetails={toggleRenderDetails}
               setMovieOnDisplay={setMovieOnDisplay}
+              setFavorites={setFavorites}
+              favorites={favorites}
             />
           ))
         ); 
@@ -43,6 +45,8 @@ const Movies = ({isLogged}) => {
               summary={movie.summary}
               fact={movie.fact}
               toggleRenderDetails={toggleRenderDetails}
+              setFavorites={setFavorites}
+              favorites={favorites}
             />
           ))
         );

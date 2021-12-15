@@ -26,13 +26,6 @@ function App() {
       <Header />
       <Nav />
       <Switch>
-        <Route path="/moviedetails/:refer" component={ () =>
-          <MovieDetails 
-            isLogged={isLogged}
-            favorites={favorites}
-            setFavorites={setFavorites}
-          />} 
-        />
         <Route path="/login" component={ () => 
           <Login
             mainLogin={mainLogin}
@@ -52,7 +45,7 @@ function App() {
             isLogged={isLogged}
           />}
         />
-        {/* <Route path="*" component={NotFound}/> */}
+        <Route path="*" component={NotFound}/>
       </Switch>
       <Footer />
     </>
