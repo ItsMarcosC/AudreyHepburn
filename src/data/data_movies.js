@@ -18,7 +18,8 @@ const AudreyMovies = {
       cover: dataImage.secretPeopleCover,
       genre: 'Drama',
       summary: dataText.secretPeopleSummary, 
-      fact: dataText.secretPeopleFact
+      fact: dataText.secretPeopleFact,
+      refer: 'secretPeople'
     },
     {
       title: 'Monte Carlo Baby',
@@ -27,7 +28,8 @@ const AudreyMovies = {
       cover: dataImage.monteCarloCover,
       genre: 'Comedy',
       summary: dataText.monteCarloSummary,
-      fact: dataText.monteCarloFact
+      fact: dataText.monteCarloFact,
+      refer: 'monteCarlo'
     },
     {
       title: 'Roman Holiday',
@@ -36,7 +38,8 @@ const AudreyMovies = {
       cover: dataImage.romanHolidayCover,
       genre: 'Romantic Comedy',
       summary: dataText.romanHolidaySummary,
-      fact: dataText.romanHolidayFact
+      fact: dataText.romanHolidayFact,
+      refer: 'romanHoliday'
     },
     {
       title: 'Sabrina',
@@ -45,7 +48,8 @@ const AudreyMovies = {
       cover: dataImage.sabrinaCover,
       genre: 'Romantic Comedy',
       summary: dataText.sabrinaSummary,
-      fact: dataText.sabrinaFact
+      fact: dataText.sabrinaFact,
+      refer: 'sabrina'
     },
     {
       title: 'War and Peace',
@@ -54,7 +58,8 @@ const AudreyMovies = {
       cover: dataImage.warAndPeaceCover,
       genre: 'Epic Historical Drama',
       summary: dataText.warAndPeaceSummary,
-      fact: dataText.warAndPeaceFact
+      fact: dataText.warAndPeaceFact,
+      refer: 'warAndPeace'
     },
     {
       title: 'Love in the Afternoon',
@@ -63,7 +68,8 @@ const AudreyMovies = {
       cover: dataImage.loveAfternoonCover,
       genre: 'Romantic Comedy',
       summary: dataText.loveAfternoonSummary,
-      fact: dataText.loveAfternoonFact
+      fact: dataText.loveAfternoonFact,
+      refer: 'loveInTheAfternoon'
     },
     {
       title: 'Funny Face',
@@ -72,7 +78,8 @@ const AudreyMovies = {
       cover: dataImage.funnyFaceCover,
       genre: 'Musical Romantic Comedy',
       summary: dataText.funnyFaceSummary,
-      fact: dataText.funnyFaceFact
+      fact: dataText.funnyFaceFact,
+      refer: 'funnyFace'
     },
     {
       title: 'Green Mansions',
@@ -81,7 +88,8 @@ const AudreyMovies = {
       cover: dataImage.greenMansionsCover,
       genre: 'Romantic Adventure',
       summary: dataText.greenMansionsSummary,
-      fact: dataText.greenMansionsFact
+      fact: dataText.greenMansionsFact,
+      refer: 'greenMansions'
     },
     {
       title: `The Nun's Story`,
@@ -90,7 +98,8 @@ const AudreyMovies = {
       cover: dataImage.nunStoryCover,
       genre: 'Drama',
       summary: dataText.nunStorySummary,
-      fact: dataText.nunStoryFact
+      fact: dataText.nunStoryFact,
+      refer: 'theNunsStory'
     },
     {
       title: 'The Unforgiven',
@@ -99,7 +108,8 @@ const AudreyMovies = {
       cover: dataImage.unforgivenCover,
       genre: 'Western',
       summary: dataText.unforgivenSummary,
-      fact: dataText.unforgivenFact
+      fact: dataText.unforgivenFact,
+      refer: 'theUnforgiven'
     },
     {
       title: `Breakfast at Tiffany's`,
@@ -108,7 +118,8 @@ const AudreyMovies = {
       cover: dataImage.tiffanyCover,
       genre: 'Romantic Comedy',
       summary: dataText.tiffanySummary,
-      fact: dataText.tiffanyFact
+      fact: dataText.tiffanyFact,
+      refer: 'breakfastAtTiffanys'
     },
     {
       title: `The Children's Hour`,
@@ -117,7 +128,8 @@ const AudreyMovies = {
       cover: dataImage.childrenHourCover,
       genre: 'Romantic Comedy',
       summary: dataText.childrenHourSummary,
-      fact: dataText.childrenHourFact
+      fact: dataText.childrenHourFact,
+      refer: 'theChildrensHour'
     },
     {
       title: `Charade`,
@@ -126,7 +138,8 @@ const AudreyMovies = {
       cover: dataImage.charadeCover,
       genre: 'Romantic Mistery',
       summary: dataText.charadeSummary,
-      fact: dataText.charadeFact
+      fact: dataText.charadeFact,
+      refer: 'charade'
     },
     {
       title: `Paris When It Sizzles`,
@@ -135,7 +148,8 @@ const AudreyMovies = {
       cover: dataImage.parisWhenCover,
       genre: 'Romantic Comedy',
       summary: dataText.parisWhenSummary,
-      fact: dataText.parisWhenFact
+      fact: dataText.parisWhenFact,
+      refer: 'parisWhenItSizzles'
     },
     {
       title: `My Fair Lady`,
@@ -144,7 +158,8 @@ const AudreyMovies = {
       cover: dataImage.myFairLadyCover,
       genre: 'Musical Romantic Comedy',
       summary: dataText.myFairLadySummary,
-      fact: dataText.myFairLadyFact
+      fact: dataText.myFairLadyFact,
+      refer: 'myFairLady'
     },
     {
       title: `How to Steal a Million`,
@@ -153,7 +168,8 @@ const AudreyMovies = {
       cover: dataImage.stealMillionCover,
       genre: 'Heist Comedy',
       summary: dataText.stealMillionSummary,
-      fact: dataText.stealMillionFact
+      fact: dataText.stealMillionFact,
+      refer: 'howToStealAMillion'
     },
     {
       title: `Two for the Road`,
@@ -162,7 +178,8 @@ const AudreyMovies = {
       cover: dataImage.twoForRoadCover,
       genre: 'Romantic Comedy-Drama',
       summary: dataText.twoForRoadSummary,
-      fact: dataText.twoForRoadFact
+      fact: dataText.twoForRoadFact,
+      refer: 'twoForTheRoad'
     },
     {
       title: `Wait Until Dark`,
@@ -171,7 +188,8 @@ const AudreyMovies = {
       cover: dataImage.waitDarkCover,
       genre: 'Psychological Thriller',
       summary: dataText.waitDarkSummary,
-      fact: dataText.waitDarkFact
+      fact: dataText.waitDarkFact,
+      refer: 'waitUntilDark'
     },
     {
       title: `Robin and Marian`,
@@ -180,7 +198,8 @@ const AudreyMovies = {
       cover: dataImage.robinMarianCover,
       genre: 'Romantic Adventure',
       summary: dataText.robinMarianSummary,
-      fact: dataText.robinMarianFact
+      fact: dataText.robinMarianFact,
+      refer: 'robinAndMarian'
     },
     {
       title: `Bloodline`,
@@ -189,7 +208,8 @@ const AudreyMovies = {
       cover: dataImage.bloodlineCover,
       genre: 'Thriller',
       summary: dataText.bloodlineSummary,
-      fact: dataText.bloodlineFact
+      fact: dataText.bloodlineFact,
+      refer: 'bloodline'
     },
     {
       title: `They All Laughed`,
@@ -198,7 +218,8 @@ const AudreyMovies = {
       cover: dataImage.laughedCover,
       genre: 'Romantic Comedy',
       summary: dataText.laughedSummary,
-      fact: dataText.laughedFact
+      fact: dataText.laughedFact,
+      refer: 'theyAllLaughed'
     },
     {
       title: `Always`,
@@ -207,7 +228,8 @@ const AudreyMovies = {
       cover: dataImage.alwaysCover,
       genre: 'Romantic Drama',
       summary: dataText.alwaysSummary,
-      fact: dataText.alwaysFact
+      fact: dataText.alwaysFact,
+      refer: 'always'
     }
   ],
 }

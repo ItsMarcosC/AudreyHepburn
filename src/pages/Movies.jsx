@@ -16,6 +16,7 @@ const Movies = ({isLogged}) => {
       return (
         movies.map((movie) => ( 
           <Movie 
+            key={movie.character}
             title={movie.title}
             cover={movie.cover}
           />

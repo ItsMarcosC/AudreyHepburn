@@ -6,6 +6,7 @@ import './style/App.css';
 // Import Components and Pages
 import Home from './pages/Home'
 import Movies from './pages/Movies';
+import MovieDetails from './pages/MovieDetails';
 import Login from './pages/Login';
 import NotFound from './pages/404';
 import Nav from './components/Nav'
@@ -25,6 +26,13 @@ function App() {
       <Header />
       <Nav />
       <Switch>
+        <Route path="/moviedetails" component={ () =>
+          <MovieDetails 
+            isLogged={isLogged}
+            favorites={favorites}
+            setFavorites={setFavorites}
+          />} 
+        />
         <Route path="/login" component={ () => 
           <Login
             mainLogin={mainLogin}
@@ -35,6 +43,8 @@ function App() {
         <Route path="/movies" component={ () =>
           <Movies
             isLogged={isLogged}
+            favorites={favorites}
+            setFavorites={setFavorites}
           />}
         />
         <Route exact path="/" component={ () => 
@@ -42,7 +52,7 @@ function App() {
             isLogged={isLogged}
           />}
         />
-        <Route path="*" component={NotFound}/>
+        {/* <Route path="*" component={NotFound}/> */}
       </Switch>
       <Footer />
     </>
