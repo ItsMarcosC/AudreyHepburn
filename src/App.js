@@ -26,7 +26,7 @@ function App() {
       <Header />
       <Nav />
       <Switch>
-        <Route path="/moviedetails" component={ () =>
+        <Route path="/moviedetails/:refer" component={ () =>
           <MovieDetails 
             isLogged={isLogged}
             favorites={favorites}
