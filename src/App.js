@@ -14,7 +14,8 @@ import Footer from './components/Footer';
 
 function App() {
   const [isLogged, toggleLogged] = useState(false);
-  const [loginInfo] = useState({
+  const [favorites, setFavorites] = useState([]);
+  const [mainLogin] = useState({
     login: 'Audrey',
     password: 'Hepburn',
   });
@@ -26,7 +27,7 @@ function App() {
       <Switch>
         <Route path="/login" component={ () => 
           <Login
-            loginInfo={loginInfo}
+            mainLogin={mainLogin}
             isLogged={isLogged}
             toggleLogged={toggleLogged}
           />}

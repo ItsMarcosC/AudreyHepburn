@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import  { Redirect } from 'react-router-dom'
 import InvalidLogin from '../components/InvalidLogin';
 
-const Login = ({loginInfo, isLogged, toggleLogged}) => {
+const Login = ({mainLogin, isLogged, toggleLogged}) => {
   const [typedInfo, setTypedInfo] = useState({ login:'', password:'' });
   const [validInfo, toggleValidInfo] = useState(true);
   
@@ -16,7 +16,7 @@ const Login = ({loginInfo, isLogged, toggleLogged}) => {
   
   const submitButtonHandler = (e) => {
     e.preventDefault();
-    if (typedInfo.login === loginInfo.login && typedInfo.password === loginInfo.password) {
+    if (typedInfo.login === mainLogin.login && typedInfo.password === mainLogin.password) {
       toggleLogged(true);
     } else {
       toggleValidInfo(false);
