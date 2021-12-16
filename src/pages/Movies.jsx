@@ -5,7 +5,7 @@ import  { Redirect } from 'react-router-dom'
 // Import Components and Pages
 import AudreyMovies from '../data/data_movies';
 import Movie from '../components/Movie';
-import MovieDetails from './MovieDetails';
+import MovieDetails from '../components/MovieDetails';
 
 const Movies = ({isLogged, setFavorites, favorites}) => {
   const [renderDetails, toggleRenderDetails] = useState(false);
@@ -37,6 +37,7 @@ const Movies = ({isLogged, setFavorites, favorites}) => {
           .map((movie) => (
             <MovieDetails 
               key={movie.refer}
+              refer={movie.refer}
               title={movie.title}
               cover={movie.cover}
               year={movie.year}

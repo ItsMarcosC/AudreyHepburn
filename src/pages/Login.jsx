@@ -14,8 +14,8 @@ const Login = ({mainLogin, isLogged, toggleLogged}) => {
     })
   }
   
-  const submitButtonHandler = (e) => {
-    e.preventDefault();
+  const submitButtonHandler = (event) => {
+    event.preventDefault();
     if (typedInfo.login === mainLogin.login && typedInfo.password === mainLogin.password) {
       toggleLogged(true);
     } else {

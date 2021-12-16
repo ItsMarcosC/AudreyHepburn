@@ -6,7 +6,7 @@ import './style/App.css';
 // Import Components and Pages
 import Home from './pages/Home'
 import Movies from './pages/Movies';
-import MovieDetails from './pages/MovieDetails';
+import Books from './pages/Books';
 import Login from './pages/Login';
 import NotFound from './pages/404';
 import Nav from './components/Nav'
@@ -35,6 +35,13 @@ function App() {
         />
         <Route path="/movies" component={ () =>
           <Movies
+            isLogged={isLogged}
+            favorites={favorites}
+            setFavorites={setFavorites}
+          />}
+        />
+        <Route path="/books" component={ () =>
+          <Books
             isLogged={isLogged}
             favorites={favorites}
             setFavorites={setFavorites}

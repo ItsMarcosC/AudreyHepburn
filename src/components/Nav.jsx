@@ -12,6 +12,9 @@ function Nav() {
         <Link to="/movies">
           <li>Movies</li>
         </Link>
+        <Link to="/books">
+          <li>Books</li>
+        </Link>
       </ul>
     </nav>
   );
