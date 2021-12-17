@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import Movies from './pages/Movies';
 import Books from './pages/Books';
 import Readlist from './pages/Readlist';
+import Favorites from './pages/Favorites';
 import Login from './pages/Login';
 import NotFound from './pages/404';
 import Nav from './components/Nav'
@@ -53,6 +54,12 @@ function App() {
             isLogged={isLogged}
             favorites={favorites}
             setFavorites={setFavorites}
+          />}
+        />
+        <Route path="/favorites" component={ () =>
+          <Favorites
+            isLogged={isLogged}
+            favorites={favorites}
           />}
         />
         <Route exact path="/" component={ () => 

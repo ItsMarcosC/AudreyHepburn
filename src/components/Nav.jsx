@@ -18,6 +18,9 @@ function Nav() {
         <Link to="/readlist">
           <li>Readlist</li>
         </Link>
+        <Link to="/favorites">
+          <li>Favorites</li>
+        </Link>
       </ul>
     </nav>
   );
