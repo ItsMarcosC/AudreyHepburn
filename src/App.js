@@ -7,6 +7,7 @@ import './style/App.css';
 import Home from './pages/Home'
 import Movies from './pages/Movies';
 import Books from './pages/Books';
+import Readlist from './pages/Readlist';
 import Login from './pages/Login';
 import NotFound from './pages/404';
 import Nav from './components/Nav'
@@ -42,6 +43,13 @@ function App() {
         />
         <Route path="/books" component={ () =>
           <Books
+            isLogged={isLogged}
+            favorites={favorites}
+            setFavorites={setFavorites}
+          />}
+        />
+        <Route path="/readlist" component={ () =>
+          <Readlist
             isLogged={isLogged}
             favorites={favorites}
             setFavorites={setFavorites}
