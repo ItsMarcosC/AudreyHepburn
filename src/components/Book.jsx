@@ -2,11 +2,8 @@
 import React from 'react';
 
 // Import Components and Pages
-import AudreyBooks from '../data/data_books_about';
 
-const Book = ({media, title, cover, ISBN, toggleRenderDetails, setBookOnDisplay, favorites, setFavorites}) => {
-  const { booksAboutAudrey } = AudreyBooks;
-  
+const Book = ({id, media, title, cover, toggleRenderDetails, setBookOnDisplay, favorites, setFavorites}) => {
   const handleClick = ({ target: {value} }) => {
     setBookOnDisplay(value);
     toggleRenderDetails(true);
@@ -16,7 +13,7 @@ const Book = ({media, title, cover, ISBN, toggleRenderDetails, setBookOnDisplay,
     const valid = favorites.filter((element) => element.key === value).length
     if (valid === 0) {
       setFavorites([
-        ...favorites, {key: value, media: media, info: booksAboutAudrey.filter((element) => element.ISBN === value )} 
+        ...favorites, {key: value, media: media, title: title} 
       ])
     } else {
       setFavorites(favorites.filter((element) => element.key !== value))
@@ -27,8 +24,8 @@ const Book = ({media, title, cover, ISBN, toggleRenderDetails, setBookOnDisplay,
     <div>
       <img src={cover} alt="" />
       <h2>{title}</h2>
-      <button type='button' onClick={handleClick} value={ISBN} >Details</button>
-      <button type='button'onClick={handleFavorites} value={ISBN} >Favorite</button>
+      <button type='button' onClick={handleClick} value={id} >Details</button>
+      <button type='button'onClick={handleFavorites} value={id} >Favorite</button>
     </div>
   );
 }

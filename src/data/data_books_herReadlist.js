@@ -11,7 +11,9 @@ const AudreyReadlist = {
       cover: dataImage.diaryAnneCover,
       summary: bookText.diaryAnneSummary,  
       link: bookText.diaryAnneLink,
-      ISBN: '0553577123'
+      ISBN: '0553577123',
+      id: 'diaryOfYoungGirl',
+      media : 'audreyReadlist'
     },
     {
       title: 'The Secret Garden',
@@ -21,7 +23,9 @@ const AudreyReadlist = {
       cover: dataImage.secretGardenCover,
       summary: bookText.secretGardenSummary,  
       link: bookText.secretGardenLink,
-      ISBN: '006440188X'
+      ISBN: '006440188X',
+      id: 'theSecretGarden',
+      media : 'audreyReadlist'
     },
     {
       title: 'The Jungle Book',
@@ -31,7 +35,9 @@ const AudreyReadlist = {
       cover: dataImage.jungleBookCover,
       summary: bookText.jungleBookSummary,  
       link: bookText.jungleBookLink,
-      ISBN: '1947844679'
+      ISBN: '1947844679',
+      id: 'theJungleBook',
+      media : 'audreyReadlist'
     },
     {
       title: 'The Four Just Men',
@@ -41,7 +47,9 @@ const AudreyReadlist = {
       cover: dataImage.fourMenCover,
       summary: bookText.fourMenSummary,  
       link: bookText.fourMenLink,
-      ISBN: '979-8750490639'
+      ISBN: '979-8750490639',
+      id: 'theFourJustMen',
+      media : 'audreyReadlist'
     },
     {
       title: 'The Mind of Mr. J. G. Reeder',
@@ -51,7 +59,9 @@ const AudreyReadlist = {
       cover: dataImage.mindOfJGCover,
       summary: bookText.mindOfJGSummary,  
       link: bookText.mindOfJGLink,
-      ISBN: '1636373496'
+      ISBN: '1636373496',
+      id: 'theMindOfMrReeder',
+      media : 'audreyReadlist'
     },
     {
       title: 'The Great Impersonation',
@@ -61,7 +71,9 @@ const AudreyReadlist = {
       cover: dataImage.greatImpersonationCover,
       summary: bookText.greatImpersonationSummary,  
       link: bookText.greatImpersonationLink,
-      ISBN: '1513281216'
+      ISBN: '1513281216',
+      id: 'theGreatImpersonation',
+      media : 'audreyReadlist'
     },
     {
       title: 'Pygmalion',
@@ -71,7 +83,9 @@ const AudreyReadlist = {
       cover: dataImage.pygmalionCover,
       summary: bookText.pygmalionSummary,  
       link: bookText.pygmalionLink,
-      ISBN: '0486282228'
+      ISBN: '0486282228',
+      id: 'pygmalion',
+      media : 'audreyReadlist'
     },
     {
       title: 'The Cocktail Party',
@@ -81,7 +95,9 @@ const AudreyReadlist = {
       cover: dataImage.cocktailPartyCover,
       summary: bookText.cocktailPartySummary,  
       link: bookText.cocktailPartyLink,
-      ISBN: '0156182890'
+      ISBN: '0156182890',
+      id: 'theCocktail',
+      media : 'audreyReadlist'
     },
     {
       title: 'Heidi',
@@ -91,7 +107,9 @@ const AudreyReadlist = {
       cover: dataImage.heidiCover,
       summary: bookText.heidiSummary,  
       link: bookText.heidiLink,
-      ISBN: '1679612700'
+      ISBN: '1679612700',
+      id: 'heidi',
+      media : 'audreyReadlist'
     },
     {
       title: 'Romeo and Juliet',
@@ -101,7 +119,9 @@ const AudreyReadlist = {
       cover: dataImage.romeoAndJulietCover,
       summary: bookText.romeoAndJulietSummary,  
       link: bookText.romeoAndJulietLink,
-      ISBN: '145155205X'
+      ISBN: '145155205X',
+      id: 'romeoAndJuliet',
+      media : 'audreyReadlist'
     },
     {
       title: 'Hamlet',
@@ -111,7 +131,9 @@ const AudreyReadlist = {
       cover: dataImage.hamletCover,
       summary: bookText.hamletSummary,  
       link: bookText.hamletLink,
-      ISBN: '9780743477123'
+      ISBN: '9780743477123',
+      id: 'hamlet',
+      media : 'audreyReadlist'
     },
     {
       title: 'The Taming of the Shrew',
@@ -121,7 +143,9 @@ const AudreyReadlist = {
       cover: dataImage.tamingShrewCover,
       summary: bookText.tamingShrewSummary,  
       link: bookText.tamingShrewLink,
-      ISBN: '1500368636'
+      ISBN: '1500368636',
+      id: 'theTamingOfTheShrew',
+      media : 'audreyReadlist'
     },
   ],
 }

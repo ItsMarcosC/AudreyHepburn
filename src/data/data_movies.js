@@ -19,7 +19,8 @@ const AudreyMovies = {
       genre: 'Drama',
       summary: dataText.secretPeopleSummary, 
       fact: dataText.secretPeopleFact,
-      refer: 'secretPeople'
+      id: 'secretPeople',
+      media: 'movie'
     },
     {
       title: 'Monte Carlo Baby',
@@ -29,7 +30,8 @@ const AudreyMovies = {
       genre: 'Comedy',
       summary: dataText.monteCarloSummary,
       fact: dataText.monteCarloFact,
-      refer: 'monteCarlo'
+      id: 'monteCarlo',
+      media: 'movie'
     },
     {
       title: 'Roman Holiday',
@@ -39,7 +41,8 @@ const AudreyMovies = {
       genre: 'Romantic Comedy',
       summary: dataText.romanHolidaySummary,
       fact: dataText.romanHolidayFact,
-      refer: 'romanHoliday'
+      id: 'romanHoliday',
+      media: 'movie'
     },
     {
       title: 'Sabrina',
@@ -49,7 +52,8 @@ const AudreyMovies = {
       genre: 'Romantic Comedy',
       summary: dataText.sabrinaSummary,
       fact: dataText.sabrinaFact,
-      refer: 'sabrina'
+      id: 'sabrina',
+      media: 'movie'
     },
     {
       title: 'War and Peace',
@@ -59,7 +63,8 @@ const AudreyMovies = {
       genre: 'Epic Historical Drama',
       summary: dataText.warAndPeaceSummary,
       fact: dataText.warAndPeaceFact,
-      refer: 'warAndPeace'
+      id: 'warAndPeace',
+      media: 'movie'
     },
     {
       title: 'Love in the Afternoon',
@@ -69,7 +74,8 @@ const AudreyMovies = {
       genre: 'Romantic Comedy',
       summary: dataText.loveAfternoonSummary,
       fact: dataText.loveAfternoonFact,
-      refer: 'loveInTheAfternoon'
+      id: 'loveInTheAfternoon',
+      media: 'movie'
     },
     {
       title: 'Funny Face',
@@ -79,7 +85,8 @@ const AudreyMovies = {
       genre: 'Musical Romantic Comedy',
       summary: dataText.funnyFaceSummary,
       fact: dataText.funnyFaceFact,
-      refer: 'funnyFace'
+      id: 'funnyFace',
+      media: 'movie'
     },
     {
       title: 'Green Mansions',
@@ -89,7 +96,8 @@ const AudreyMovies = {
       genre: 'Romantic Adventure',
       summary: dataText.greenMansionsSummary,
       fact: dataText.greenMansionsFact,
-      refer: 'greenMansions'
+      id: 'greenMansions',
+      media: 'movie'
     },
     {
       title: `The Nun's Story`,
@@ -99,7 +107,8 @@ const AudreyMovies = {
       genre: 'Drama',
       summary: dataText.nunStorySummary,
       fact: dataText.nunStoryFact,
-      refer: 'theNunsStory'
+      id: 'theNunsStory',
+      media: 'movie'
     },
     {
       title: 'The Unforgiven',
@@ -109,7 +118,8 @@ const AudreyMovies = {
       genre: 'Western',
       summary: dataText.unforgivenSummary,
       fact: dataText.unforgivenFact,
-      refer: 'theUnforgiven'
+      id: 'theUnforgiven',
+      media: 'movie'
     },
     {
       title: `Breakfast at Tiffany's`,
@@ -119,7 +129,8 @@ const AudreyMovies = {
       genre: 'Romantic Comedy',
       summary: dataText.tiffanySummary,
       fact: dataText.tiffanyFact,
-      refer: 'breakfastAtTiffanys'
+      id: 'breakfastAtTiffanys',
+      media: 'movie'
     },
     {
       title: `The Children's Hour`,
@@ -129,7 +140,8 @@ const AudreyMovies = {
       genre: 'Romantic Comedy',
       summary: dataText.childrenHourSummary,
       fact: dataText.childrenHourFact,
-      refer: 'theChildrensHour'
+      id: 'theChildrensHour',
+      media: 'movie'
     },
     {
       title: `Charade`,
@@ -139,7 +151,8 @@ const AudreyMovies = {
       genre: 'Romantic Mistery',
       summary: dataText.charadeSummary,
       fact: dataText.charadeFact,
-      refer: 'charade'
+      id: 'charade',
+      media: 'movie'
     },
     {
       title: `Paris When It Sizzles`,
@@ -149,7 +162,8 @@ const AudreyMovies = {
       genre: 'Romantic Comedy',
       summary: dataText.parisWhenSummary,
       fact: dataText.parisWhenFact,
-      refer: 'parisWhenItSizzles'
+      id: 'parisWhenItSizzles',
+      media: 'movie'
     },
     {
       title: `My Fair Lady`,
@@ -159,7 +173,8 @@ const AudreyMovies = {
       genre: 'Musical Romantic Comedy',
       summary: dataText.myFairLadySummary,
       fact: dataText.myFairLadyFact,
-      refer: 'myFairLady'
+      id: 'myFairLady',
+      media: 'movie'
     },
     {
       title: `How to Steal a Million`,
@@ -169,7 +184,8 @@ const AudreyMovies = {
       genre: 'Heist Comedy',
       summary: dataText.stealMillionSummary,
       fact: dataText.stealMillionFact,
-      refer: 'howToStealAMillion'
+      id: 'howToStealAMillion',
+      media: 'movie'
     },
     {
       title: `Two for the Road`,
@@ -179,7 +195,8 @@ const AudreyMovies = {
       genre: 'Romantic Comedy-Drama',
       summary: dataText.twoForRoadSummary,
       fact: dataText.twoForRoadFact,
-      refer: 'twoForTheRoad'
+      id: 'twoForTheRoad',
+      media: 'movie'
     },
     {
       title: `Wait Until Dark`,
@@ -189,7 +206,8 @@ const AudreyMovies = {
       genre: 'Psychological Thriller',
       summary: dataText.waitDarkSummary,
       fact: dataText.waitDarkFact,
-      refer: 'waitUntilDark'
+      id: 'waitUntilDark',
+      media: 'movie'
     },
     {
       title: `Robin and Marian`,
@@ -199,7 +217,8 @@ const AudreyMovies = {
       genre: 'Romantic Adventure',
       summary: dataText.robinMarianSummary,
       fact: dataText.robinMarianFact,
-      refer: 'robinAndMarian'
+      id: 'robinAndMarian',
+      media: 'movie'
     },
     {
       title: `Bloodline`,
@@ -209,7 +228,8 @@ const AudreyMovies = {
       genre: 'Thriller',
       summary: dataText.bloodlineSummary,
       fact: dataText.bloodlineFact,
-      refer: 'bloodline'
+      id: 'bloodline',
+      media: 'movie'
     },
     {
       title: `They All Laughed`,
@@ -219,7 +239,8 @@ const AudreyMovies = {
       genre: 'Romantic Comedy',
       summary: dataText.laughedSummary,
       fact: dataText.laughedFact,
-      refer: 'theyAllLaughed'
+      id: 'theyAllLaughed',
+      media: 'movie'
     },
     {
       title: `Always`,
@@ -229,7 +250,8 @@ const AudreyMovies = {
       genre: 'Romantic Drama',
       summary: dataText.alwaysSummary,
       fact: dataText.alwaysFact,
-      refer: 'always'
+      id: 'always',
+      media: 'movie'
     }
   ],
 }

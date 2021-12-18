@@ -2,11 +2,8 @@
 import React from 'react';
 
 // Import Components and Pages
-import AudreyMovies from '../data/data_movies';
 
-const Movie = ({refer, title, cover, toggleRenderDetails, setMovieOnDisplay, favorites, setFavorites}) => {
-  const { movies } = AudreyMovies;
-
+const Movie = ({id, media, title, cover, toggleRenderDetails, setMovieOnDisplay, favorites, setFavorites}) => {
   const handleClick = ({ target: {value} }) => {
     setMovieOnDisplay(value);
     toggleRenderDetails(true);
@@ -16,7 +13,7 @@ const Movie = ({refer, title, cover, toggleRenderDetails, setMovieOnDisplay, fav
     const valid = favorites.filter((element) => element.key === value).length
     if (valid === 0) {
       setFavorites([
-        ...favorites, {key: value, media: 'movie', info: movies.filter((element) => element.refer === value )} 
+        ...favorites, {key: value, media: media, title: title} 
       ])
     } else {
       setFavorites(favorites.filter((element) => element.key !== value))
@@ -27,8 +24,8 @@ const Movie = ({refer, title, cover, toggleRenderDetails, setMovieOnDisplay, fav
     <div>
       <img src={cover} alt="" />
       <h2>{title}</h2>
-      <button type='button' onClick={handleClick} value={refer} >Details</button>
-      <button type='button'onClick={handleFavorites} value={refer} >Favorite</button>
+      <button type='button' onClick={handleClick} value={id} >Details</button>
+      <button type='button'onClick={handleFavorites} value={id} >Favorite</button>
     </div>
   );
 }

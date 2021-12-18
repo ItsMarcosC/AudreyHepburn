@@ -12,6 +12,8 @@ const AudreyBooks = {
       summary: bookText.warriorAudreySummary,
       link: bookText.warriorAudreyLink,
       ISBN: '173527383X',
+      id: 'warriorAudreyHepburn',
+      media: 'book'
     },
     {
       title: 'Dutch Girl: Audrey Hepburn and World War II',
@@ -22,6 +24,8 @@ const AudreyBooks = {
       summary: bookText.dutchGirlSummary,
       link: bookText.dutchGirlLink,
       ISBN: '1732273588',
+      id: 'dutchGirl',
+      media: 'book'
     },
     {
       title: 'Enchantment: The Life of Audrey Hepburn',
@@ -32,6 +36,8 @@ const AudreyBooks = {
       summary: bookText.enchantmentSummary,
       link: bookText.enchantmentLink,
       ISBN: '0307237591',
+      id: 'enchantment',
+      media: 'book'
     },
     {
       title: `Audrey at Home: Memories of My Mother's Kitchen`,
@@ -42,6 +48,8 @@ const AudreyBooks = {
       summary: bookText.audreyAtHomeSummary,
       link: bookText.audreyAtHomeLink,
       ISBN: '9780062284709',
+      id: 'audreyAtHome',
+      media: 'book'
     },
     {
       title: `Audrey: The 50s`,
@@ -52,6 +60,8 @@ const AudreyBooks = {
       summary: bookText.audreyFiftiesSummary,
       link: bookText.audreyFiftiesLink,
       ISBN: '0062472062',
+      id: 'audreyThe50s',
+      media: 'book'
     },
     {
       title: `Audrey Hepburn, An Elegant Spirit`,
@@ -62,6 +72,8 @@ const AudreyBooks = {
       summary: bookText.elegantSpiritSummary,
       link: bookText.elegantSpiritLink,
       ISBN: '0671024795',
+      id: 'elegantSpirit',
+      media: 'book'
     },
     {
       title: `Audrey Hepburn`,
@@ -72,6 +84,8 @@ const AudreyBooks = {
       summary: bookText.bioAudreyHepburnSummary,
       link: bookText.bioAudreyHepburnLink,
       ISBN: '0425182126',
+      id: 'audreyHepburnBio',
+      media: 'book'
     },
     {
       title: `How to be Lovely: The Audrey Hepburn Way of Life`,
@@ -82,6 +96,8 @@ const AudreyBooks = {
       summary: bookText.beLovelySummary,
       link: bookText.beLovelyLink,
       ISBN: '0525948236',
+      id: 'howToBeLovely',
+      media: 'book'
     },
     {
       title: `Little Audrey's Daydream: The Life of Audrey Hepburn`,
@@ -92,6 +108,8 @@ const AudreyBooks = {
       summary: bookText.littleAudreySummary,
       link: bookText.littleAudreyLink,
       ISBN: '978-1616899912',
+      id: 'littleAudreyDaydream',
+      media: 'book'
     },
     {
       title: `Fifth Avenue, 5 A.M.: Audrey Hepburn, Breakfast at Tiffany's, and the Dawn of the Modern Woman`,
@@ -102,6 +120,8 @@ const AudreyBooks = {
       summary: bookText.fifthAvenueSummary,
       link: bookText.fifthAvenueLink,
       ISBN: '9780061774164',
+      id: 'fifthAvenue',
+      media: 'book'
     },
     {
       title: `Audrey Hepburn: A Charmed Life`,
@@ -112,6 +132,8 @@ const AudreyBooks = {
       summary: bookText.charmedLifeSummary,
       link: bookText.charmedLifeLink,
       ISBN: '1628725656',
+      id: 'aCharmedLife',
+      media: 'book'
     },
     {
       title: `Audrey Hepburn in Hats`,
@@ -122,6 +144,8 @@ const AudreyBooks = {
       summary: bookText.audreyInHatsSummary,
       link: bookText.audreyInHatsLink,
       ISBN: '1909526002',
+      id: 'audreyHepburnInHats',
+      media: 'book'
     },
     {
       title: `Audrey Hepburn: Portraits of an Icon`,
@@ -132,6 +156,8 @@ const AudreyBooks = {
       summary: bookText.portraitsIconSummary,
       link: bookText.portraitsIconLink,
       ISBN: '0847847004',
+      id: 'portraitsOfAnIcon',
+      media: 'book'
     },
     {
       title: `Audrey and Givenchy: A Fashion Love Affair`,
@@ -142,6 +168,8 @@ const AudreyBooks = {
       summary: bookText.fashionLoveSummary,
       link: bookText.fashionLoveLink,
       ISBN: '0762460172',
+      id: 'andreyAndGivenchy',
+      media: 'book'
     },
     {
       title: `What Would Audrey Do?: Timeless Lessons for Living with Grace and Style`,
@@ -152,6 +180,8 @@ const AudreyBooks = {
       summary: bookText.timelessLessonsSummary,
       link: bookText.timelessLessonsLink,
       ISBN: '1592404286',
+      id: 'whatWouldAudreyDo',
+      media: 'book'
     },
     {
       title: `Audrey Hepburn Cookbook: The Book With 20 Recipes Audrey Hepburn Every Day`,
@@ -162,6 +192,8 @@ const AudreyBooks = {
       summary: bookText.hepburnCookbookSummary,
       link: bookText.hepburnCookbookLink,
       ISBN: '979-8501936645',
+      id: 'audreyHepburnCookbook',
+      media: 'book'
     },
     {
       title: `Fan Phenomena: Audrey Hepburn`,
@@ -172,6 +204,8 @@ const AudreyBooks = {
       summary: bookText.fanPhenomenaSummary,
       link: bookText.fanPhenomenaLink,
       ISBN: '1783202068',
+      id: 'fanPhenomena',
+      media: 'book'
     },
     {
       title: `Audrey: Her Real Story`,
@@ -182,6 +216,8 @@ const AudreyBooks = {
       summary: bookText.herStorySummary,
       link: bookText.herStoryLink,
       ISBN: '9780312180461',
+      id: 'herRealStory',
+      media: 'book'
     },
     {
       title: `So Audrey: 59 Ways to Put a Little Hepburn in Your Step`,
@@ -192,6 +228,8 @@ const AudreyBooks = {
       summary: bookText.soAudreySummary,
       link: bookText.soAudreyLink,
       ISBN: '0762440589',
+      id: 'soAudrey',
+      media: 'book'
     },
     {
       title: `Audrey Hepburn: A Life in Pictures`,
@@ -202,6 +240,8 @@ const AudreyBooks = {
       summary: bookText.lifeInPicturesSummary,
       link: bookText.lifeInPicturesLink,
       ISBN: '1567995314',
+      id: 'aLifeInPictures',
+      media: 'book'
     },
     {
       title: `The Audrey Hepburn Treasures`,
@@ -212,6 +252,8 @@ const AudreyBooks = {
       summary: bookText.audreyTreasuresSummary,
       link: bookText.audreyTreasuresLink,
       ISBN: '0743289862',
+      id: 'theAudreyHepburnTreasures',
+      media: 'book'
     },
     {
       title: `The Little Book of Audrey Hepburn`,
@@ -222,6 +264,8 @@ const AudreyBooks = {
       summary: bookText.littleBookSummary,
       link: bookText.littleBookLink,
       ISBN: '1780978715',
+      id: 'theLittleBookOfAudreyHepburn',
+      media: 'book'
     },
   ],
 }

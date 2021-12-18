@@ -20,24 +20,26 @@ const Readlist = ({isLogged, setFavorites, favorites}) => {
         return (
           fromAudreyReadlist.map((book) => ( 
             <Book 
-              key={book.ISBN}
+              key={book.id}
+              id={book.id}
               ISBN={book.ISBN}
               title={book.title}
               cover={book.cover}
+              media={book.media}
               toggleRenderDetails={toggleRenderDetails}
               setBookOnDisplay={setBookOnDisplay}
               setFavorites={setFavorites}
               favorites={favorites}
-              media='readlist'
             />
           ))
         ); 
       } else {
         return (
-          fromAudreyReadlist.filter((book) => book.ISBN === bookOnDisplay)
+          fromAudreyReadlist.filter((book) => book.id === bookOnDisplay)
           .map((book) => (
             <BookDetails 
-              key={book.ISBN}
+              key={book.id}
+              id={book.id}
               title={book.title}
               cover={book.cover}
               releaseYear={book.releaseYear}
@@ -46,10 +48,10 @@ const Readlist = ({isLogged, setFavorites, favorites}) => {
               summary={book.summary}
               link={book.link}
               ISBN={book.ISBN}
+              media={book.media}
               toggleRenderDetails={toggleRenderDetails}
               setFavorites={setFavorites}
               favorites={favorites}
-              media='readlist'
             />
           ))
         );

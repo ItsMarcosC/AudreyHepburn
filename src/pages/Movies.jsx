@@ -20,10 +20,11 @@ const Movies = ({isLogged, setFavorites, favorites}) => {
         return (
           movies.map((movie) => ( 
             <Movie 
-              key={movie.refer}
-              refer={movie.refer}
+              key={movie.id}
+              id={movie.id}
               title={movie.title}
               cover={movie.cover}
+              media={movie.media}
               toggleRenderDetails={toggleRenderDetails}
               setMovieOnDisplay={setMovieOnDisplay}
               setFavorites={setFavorites}
@@ -33,11 +34,11 @@ const Movies = ({isLogged, setFavorites, favorites}) => {
         ); 
       } else {
         return (
-          movies.filter((movie) => movie.refer === movieOnDisplay)
+          movies.filter((movie) => movie.id === movieOnDisplay)
           .map((movie) => (
             <MovieDetails 
-              key={movie.refer}
-              refer={movie.refer}
+              key={movie.id}
+              id={movie.id}
               title={movie.title}
               cover={movie.cover}
               year={movie.year}
@@ -45,6 +46,7 @@ const Movies = ({isLogged, setFavorites, favorites}) => {
               genre={movie.genre}
               summary={movie.summary}
               fact={movie.fact}
+              media={movie.media}
               toggleRenderDetails={toggleRenderDetails}
               setFavorites={setFavorites}
               favorites={favorites}
