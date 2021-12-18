@@ -60,6 +60,7 @@ function App() {
           <Favorites
             isLogged={isLogged}
             favorites={favorites}
+            setFavorites={setFavorites}
           />}
         />
         <Route exact path="/" component={ () => 

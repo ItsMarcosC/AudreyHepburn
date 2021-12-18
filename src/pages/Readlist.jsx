@@ -28,6 +28,7 @@ const Readlist = ({isLogged, setFavorites, favorites}) => {
               setBookOnDisplay={setBookOnDisplay}
               setFavorites={setFavorites}
               favorites={favorites}
+              media='readlist'
             />
           ))
         ); 
@@ -48,6 +49,7 @@ const Readlist = ({isLogged, setFavorites, favorites}) => {
               toggleRenderDetails={toggleRenderDetails}
               setFavorites={setFavorites}
               favorites={favorites}
+              media='readlist'
             />
           ))
         );

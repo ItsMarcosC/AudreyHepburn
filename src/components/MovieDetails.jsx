@@ -1,7 +1,12 @@
 // Import React and CSS
 import React from 'react';
 
+// Import Components and Pages
+import AudreyMovies from '../data/data_movies';
+
 const MovieDetails = ({refer, title, cover, year, character, genre, summary, fact, favorites, setFavorites, toggleRenderDetails}) => {
+  const { movies } = AudreyMovies;
+
   const handleClick = () => {
     toggleRenderDetails(false);
   }
@@ -10,7 +15,7 @@ const MovieDetails = ({refer, title, cover, year, character, genre, summary, fac
     const valid = favorites.filter((element) => element.key === value).length
     if (valid === 0) {
       setFavorites([
-        ...favorites, {key: value, media: 'movie'}
+        ...favorites, {key: value, media: 'movie', info: movies.filter((element) => element.refer === value )} 
       ])
     } else {
       setFavorites(favorites.filter((element) => element.key !== value))

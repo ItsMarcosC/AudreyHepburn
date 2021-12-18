@@ -1,7 +1,12 @@
 // Import React and CSS
 import React from 'react';
 
-const Book = ({title, cover, ISBN, toggleRenderDetails, setBookOnDisplay, favorites, setFavorites}) => {
+// Import Components and Pages
+import AudreyBooks from '../data/data_books_about';
+
+const Book = ({media, title, cover, ISBN, toggleRenderDetails, setBookOnDisplay, favorites, setFavorites}) => {
+  const { booksAboutAudrey } = AudreyBooks;
+  
   const handleClick = ({ target: {value} }) => {
     setBookOnDisplay(value);
     toggleRenderDetails(true);
@@ -11,7 +16,7 @@ const Book = ({title, cover, ISBN, toggleRenderDetails, setBookOnDisplay, favori
     const valid = favorites.filter((element) => element.key === value).length
     if (valid === 0) {
       setFavorites([
-        ...favorites, {key: value, media: 'book'}
+        ...favorites, {key: value, media: media, info: booksAboutAudrey.filter((element) => element.ISBN === value )} 
       ])
     } else {
       setFavorites(favorites.filter((element) => element.key !== value))
