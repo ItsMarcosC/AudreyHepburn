@@ -17,6 +17,7 @@ import Footer from './components/Footer';
 
 function App() {
   const [isLogged, toggleLogged] = useState(false);
+  const [selectedFilter, setFilter] = useState('All');
   const [favorites, setFavorites] = useState([]);
   const [mainLogin] = useState({
     login: 'Audrey',
@@ -61,6 +62,8 @@ function App() {
             isLogged={isLogged}
             favorites={favorites}
             setFavorites={setFavorites}
+            selectedFilter={selectedFilter}
+            setFilter={setFilter}
           />}
         />
         <Route exact path="/" component={ () => 

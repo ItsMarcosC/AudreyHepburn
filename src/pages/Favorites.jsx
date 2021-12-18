@@ -6,8 +6,7 @@ import FavoriteCard from '../components/FavoriteCard';
 // Import Components and Pages
 import FilterMenu from '../components/FilterMenu';
 
-const Favorites = ({ isLogged, favorites}) => {
-  const [selectedFilter, setFilter] = useState('');
+const Favorites = ({ isLogged, favorites, setFavorites, selectedFilter, setFilter}) => {
   const [filteredFavorites, setFilteredFavorites] = useState([]);
 
   useEffect(() => {
@@ -49,6 +48,8 @@ const Favorites = ({ isLogged, favorites}) => {
             id={element.key}
             media={element.media}
             title={element.title}
+            favorites={favorites}
+            setFavorites={setFavorites}
           />
         ))}
         </div>
