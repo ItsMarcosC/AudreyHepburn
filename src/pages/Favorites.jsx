@@ -42,12 +42,10 @@ const Favorites = ({ isLogged, favorites, setFavorites, selectedFilter, setFilte
           setFilteredFavorites={setFilteredFavorites} 
           favorites={favorites}
         />
-        {filteredFavorites.map((element) => (
+        {filteredFavorites.map((favorite) => (
           <FavoriteCard 
-            key={element.key}
-            id={element.key}
-            media={element.media}
-            title={element.title}
+            key={favorite.id}
+            favorite={favorite}
             favorites={favorites}
             setFavorites={setFavorites}
           />

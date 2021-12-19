@@ -2,10 +2,8 @@
 import React from 'react';
 
 // Import Components and Pages
-import AudreyMovies from '../data/data_movies';
 
-const MovieDetails = ({id, media, title, cover, year, character, genre, summary, fact, favorites, setFavorites, toggleRenderDetails}) => {
-  
+const MovieDetails = ({movie, favorites, setFavorites, toggleRenderDetails}) => {
   const handleClick = () => {
     toggleRenderDetails(false);
   }
@@ -14,7 +12,16 @@ const MovieDetails = ({id, media, title, cover, year, character, genre, summary,
     const valid = favorites.filter((element) => element.key === value).length
     if (valid === 0) {
       setFavorites([
-        ...favorites, {key: value, media: media, title: title} 
+        ...favorites, 
+        { key: value, 
+          media: movie.media, 
+          title: movie.title, 
+          cover: movie.cover, 
+          year: movie.year, 
+          character: movie.character, 
+          genre: movie.genre, 
+          summary: movie.summary, 
+          fact: movie.fact} 
       ])
     } else {
       setFavorites(favorites.filter((element) => element.key !== value))
@@ -23,15 +30,15 @@ const MovieDetails = ({id, media, title, cover, year, character, genre, summary,
 
   return (
     <div>
-      <h2>{title}</h2>
-      <img src={cover} alt="" />
-      <h3>{year}</h3>
-      <h3>{character}</h3>
-      <h3>{genre}</h3>
-      <h3>{summary}</h3>
-      <h3>{fact}</h3>
-      <button type='button' onClick={handleClick} value={id} >Hide Details</button>
-      <button type='button' onClick={handleFavorites} value={id} >Favorite</button>
+      <h2>{movie.title}</h2>
+      <img src={movie.cover} alt="" />
+      <h3>{movie.year}</h3>
+      <h3>{movie.character}</h3>
+      <h3>{movie.genre}</h3>
+      <h3>{movie.summary}</h3>
+      <h3>{movie.fact}</h3>
+      <button type='button' onClick={handleClick} value={movie.id} >Hide Details</button>
+      <button type='button' onClick={handleFavorites} value={movie.id} >Favorite</button>
     </div>
   );
 }

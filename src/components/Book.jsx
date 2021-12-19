@@ -3,7 +3,7 @@ import React from 'react';
 
 // Import Components and Pages
 
-const Book = ({id, media, title, cover, toggleRenderDetails, setBookOnDisplay, favorites, setFavorites}) => {
+const Book = ({book, toggleRenderDetails, setBookOnDisplay, favorites, setFavorites}) => {
   const handleClick = ({ target: {value} }) => {
     setBookOnDisplay(value);
     toggleRenderDetails(true);
@@ -13,7 +13,17 @@ const Book = ({id, media, title, cover, toggleRenderDetails, setBookOnDisplay, f
     const valid = favorites.filter((element) => element.key === value).length
     if (valid === 0) {
       setFavorites([
-        ...favorites, {key: value, media: media, title: title} 
+        ...favorites, 
+        { key: value, 
+        media: book.media, 
+        title: book.title, 
+        author: book.author, 
+        releaseYear: book.releaseYear, 
+        pages: book.pages, 
+        summary: book.summary, 
+        link: book.link, 
+        ISBN: book.ISBN, 
+        cover: book.cover} 
       ])
     } else {
       setFavorites(favorites.filter((element) => element.key !== value))
@@ -22,10 +32,10 @@ const Book = ({id, media, title, cover, toggleRenderDetails, setBookOnDisplay, f
 
   return (
     <div>
-      <img src={cover} alt="" />
-      <h2>{title}</h2>
-      <button type='button' onClick={handleClick} value={id} >Details</button>
-      <button type='button'onClick={handleFavorites} value={id} >Favorite</button>
+      <img src={book.cover} alt="" />
+      <h2>{book.title}</h2>
+      <button type='button' onClick={handleClick} value={book.id} >Details</button>
+      <button type='button'onClick={handleFavorites} value={book.id} >Favorite</button>
     </div>
   );
 }

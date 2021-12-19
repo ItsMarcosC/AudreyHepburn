@@ -3,17 +3,15 @@ import React from 'react';
 
 // Import Components and Pages
 
-const FavoriteCard = ({id, media, title, favorites, setFavorites}) => {
-  const handleClick = (e) => {
-    e.preventDefault();
-    setFavorites(favorites.filter((element) => element.key !== e.target.value))
+const FavoriteCard = ({favorite, favorites, setFavorites}) => {
+  const handleClick = ({ target: {value} }) => {
+    setFavorites(favorites.filter((element) => element.title !== value))
   }
   return (
     <div>
-      <h2>{title}</h2>
-      <h2>{media}</h2>
-      <h2>{id}</h2>
-      <button type='button' onClick={handleClick} value={id}> Favorite</button>
+      <h2>{favorite.title}</h2>
+      <img src={favorite.cover} alt='' />
+      <button type='button' onClick={handleClick} value={favorite.title}> Favorite</button>
     </div>
   );
 }

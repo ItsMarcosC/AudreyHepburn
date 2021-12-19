@@ -21,10 +21,7 @@ const Movies = ({isLogged, setFavorites, favorites}) => {
           movies.map((movie) => ( 
             <Movie 
               key={movie.id}
-              id={movie.id}
-              title={movie.title}
-              cover={movie.cover}
-              media={movie.media}
+              movie={movie}
               toggleRenderDetails={toggleRenderDetails}
               setMovieOnDisplay={setMovieOnDisplay}
               setFavorites={setFavorites}
@@ -38,15 +35,7 @@ const Movies = ({isLogged, setFavorites, favorites}) => {
           .map((movie) => (
             <MovieDetails 
               key={movie.id}
-              id={movie.id}
-              title={movie.title}
-              cover={movie.cover}
-              year={movie.year}
-              character={movie.character}
-              genre={movie.genre}
-              summary={movie.summary}
-              fact={movie.fact}
-              media={movie.media}
+              movie={movie}
               toggleRenderDetails={toggleRenderDetails}
               setFavorites={setFavorites}
               favorites={favorites}

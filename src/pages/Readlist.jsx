@@ -21,11 +21,7 @@ const Readlist = ({isLogged, setFavorites, favorites}) => {
           fromAudreyReadlist.map((book) => ( 
             <Book 
               key={book.id}
-              id={book.id}
-              ISBN={book.ISBN}
-              title={book.title}
-              cover={book.cover}
-              media={book.media}
+              book={book}
               toggleRenderDetails={toggleRenderDetails}
               setBookOnDisplay={setBookOnDisplay}
               setFavorites={setFavorites}
@@ -39,16 +35,7 @@ const Readlist = ({isLogged, setFavorites, favorites}) => {
           .map((book) => (
             <BookDetails 
               key={book.id}
-              id={book.id}
-              title={book.title}
-              cover={book.cover}
-              releaseYear={book.releaseYear}
-              author={book.author}
-              pages={book.pages}
-              summary={book.summary}
-              link={book.link}
-              ISBN={book.ISBN}
-              media={book.media}
+              book={book}
               toggleRenderDetails={toggleRenderDetails}
               setFavorites={setFavorites}
               favorites={favorites}
