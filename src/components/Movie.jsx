@@ -10,11 +10,11 @@ const Movie = ({movie, toggleRenderDetails, setMovieOnDisplay, favorites, setFav
   }
 
   const handleFavorites = ({ target: {value} }) => {
-    const valid = favorites.filter((element) => element.key === value).length
+    const valid = favorites.filter((element) => element.id === value).length
     if (valid === 0) {
       setFavorites([
         ...favorites, 
-        { key: value, 
+        { id: value, 
         media: movie.media, 
         title: movie.title, 
         cover: movie.cover, 
@@ -25,7 +25,7 @@ const Movie = ({movie, toggleRenderDetails, setMovieOnDisplay, favorites, setFav
         fact: movie.fact}
       ])
     } else {
-      setFavorites(favorites.filter((element) => element.key !== value))
+      setFavorites(favorites.filter((element) => element.id !== value))
     }
   }
 

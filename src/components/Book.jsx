@@ -10,11 +10,11 @@ const Book = ({book, toggleRenderDetails, setBookOnDisplay, favorites, setFavori
   }
 
   const handleFavorites = ({ target: {value} }) => {
-    const valid = favorites.filter((element) => element.key === value).length
+    const valid = favorites.filter((element) => element.id === value).length
     if (valid === 0) {
       setFavorites([
         ...favorites, 
-        { key: value, 
+        { id: value, 
         media: book.media, 
         title: book.title, 
         author: book.author, 
@@ -26,7 +26,7 @@ const Book = ({book, toggleRenderDetails, setBookOnDisplay, favorites, setFavori
         cover: book.cover} 
       ])
     } else {
-      setFavorites(favorites.filter((element) => element.key !== value))
+      setFavorites(favorites.filter((element) => element.id !== value))
     }
   }
 
