@@ -8,7 +8,7 @@ const Movie = ({movie, favorites, setFavorites, setMovie}) => {
   const history = useHistory();
   const handleClick = ({ target: {value} }) => {
     setMovie(value);
-    history.push('/details')
+    history.push('/MovieDetails')
   }
 
   const handleFavorites = ({ target: {value} }) => {

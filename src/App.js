@@ -14,7 +14,7 @@ import NotFound from './pages/404';
 import Nav from './components/Nav'
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Details from './pages/Details';
+import Mdetails from './pages/Mdetails';
 
 function App() {
   const [isLogged, toggleLogged] = useState(false);
@@ -32,8 +32,8 @@ function App() {
       <Header />
       <Nav />
       <Switch>
-      <Route path="/details" component={ () =>
-          <Details 
+      <Route path="/MovieDetails" component={ () =>
+          <Mdetails 
             movie={movieD}
             favorites={favorites}
             setFavorites={setFavorites}
