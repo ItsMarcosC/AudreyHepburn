@@ -1,55 +1,64 @@
-import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+import { saveLogin } from '../redux/actions';
 import  { Redirect } from 'react-router-dom'
-import InvalidLogin from '../components/InvalidLogin';
 
-const Login = ({mainLogin, isLogged, toggleLogged}) => {
-  const [typedInfo, setTypedInfo] = useState({ login:'', password:'' });
-  const [validInfo, toggleValidInfo] = useState(true);
+const Login = ({saveInfo}) => {
+  const [typedInfo, setTypedInfo] = useState({ name:'', email:''});
+  const [invalidInfo, toggleInvalidInfo] = useState(true);
+
+  useEffect( () => {
+    handleValidation();
+  }, [typedInfo] )
   
+  const handleValidation = () => {
+    const validRegex = /\S+@\S+\.\S+/;
+    const minimumNameLength = 4;
+
+    if (validRegex.test(typedInfo.email) && typedInfo.name.length >= minimumNameLength) {
+      toggleInvalidInfo(false)
+    } else {
+      toggleInvalidInfo(true)
+    }
+  }
+
   const onChangeHandle = ({target}) => {
     const {name, value} = target;
     setTypedInfo({
         ...typedInfo,
         [name]: value
-    })
+    });
   }
   
-  const submitButtonHandler = (event) => {
-    event.preventDefault();
-    if (typedInfo.login === mainLogin.login && typedInfo.password === mainLogin.password) {
-      toggleLogged(true);
-    } else {
-      toggleValidInfo(false);
-    }
-    setTypedInfo({
-      login: '',
-      password: '',
-    });
+  const submitButtonHandler = () => {
+    saveInfo(typedInfo.name, typedInfo.email, true)
   };
 
-  switch(isLogged) {
-    case true:
-      return  <Redirect to="/"/>
-    default:
-      return ( 
-        <div>
-          <form>
-            <label htmlFor="login"> Login:
-              <input type="text" id="login" name="login" onChange={onChangeHandle} value={typedInfo.login} placeholder={`(Use 'Audrey' to enter)`} />
-            </label>
+    return ( 
+      <div>
+        <form>
+          <label htmlFor="name"> Name:
+            <input type="text" id="name" name="name" onChange={onChangeHandle} value={typedInfo.name} placeholder={`Your name`} />
+          </label>
 
-            <label htmlFor="password"> Password:
-              <input type="text" id="password" name="password" onChange={onChangeHandle} value={typedInfo.password} placeholder={`(Use 'Hepburn' to enter)`} />
-            </label>
-            
-            <button type="submit" onClick={submitButtonHandler} >
-              Sign in  
-            </button>
-          </form>
-          { validInfo ? '' : <InvalidLogin /> }
-        </div>
-      );
-  }
+          <label htmlFor="email"> Email:
+            <input type="text" id="email" name="email" onChange={onChangeHandle} value={typedInfo.email} placeholder={`Your email`} />
+          </label>
+          
+          <button 
+            type="button" 
+            disabled = {invalidInfo}
+            onClick={submitButtonHandler} 
+          >
+            Sign in  
+          </button>
+        </form>
+      </div>
+    );
 }
 
-export default Login;
+const mapDispatchToProps = (dispatch) => ({
+  saveInfo:(name, email, isLogged) => dispatch(saveLogin(name, email, isLogged))
+});
+
+export default connect(null, mapDispatchToProps)(Login);
