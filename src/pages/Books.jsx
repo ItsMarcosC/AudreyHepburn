@@ -6,6 +6,7 @@ import  { Redirect } from 'react-router-dom'
 import AudreyBooks from '../data/data_books_about';
 import Book from '../components/Book';
 import BookDetails from '../components/BookDetails';
+import Comments from '../components/Comments';
 
 const Books = ({isLogged, setFavorites, favorites}) => {
   const [renderDetails, toggleRenderDetails] = useState(false);
@@ -33,13 +34,17 @@ const Books = ({isLogged, setFavorites, favorites}) => {
         return (
           booksAboutAudrey.filter((book) => book.id === bookOnDisplay)
           .map((book) => (
-            <BookDetails 
-              key={book.id}
-              book={book}
-              toggleRenderDetails={toggleRenderDetails}
-              setFavorites={setFavorites}
-              favorites={favorites}
-            />
+            <div key={book.id}>
+              <BookDetails    
+                book={book}
+                toggleRenderDetails={toggleRenderDetails}
+                setFavorites={setFavorites}
+                favorites={favorites}
+              />
+              <Comments 
+                source={book}
+              />
+            </div>
           ))
         );
       }

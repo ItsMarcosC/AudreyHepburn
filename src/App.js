@@ -14,11 +14,14 @@ import NotFound from './pages/404';
 import Nav from './components/Nav'
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Details from './pages/Details';
 
 function App() {
   const [isLogged, toggleLogged] = useState(false);
   const [selectedFilter, setFilter] = useState('All');
   const [favorites, setFavorites] = useState([]);
+  const [storedComments, saveComment] = useState([]);
+  const [movieD, setMovie] = useState('');
   const [mainLogin] = useState({
     login: 'Audrey',
     password: 'Hepburn',
@@ -29,6 +32,13 @@ function App() {
       <Header />
       <Nav />
       <Switch>
+      <Route path="/details" component={ () =>
+          <Details 
+            movie={movieD}
+            favorites={favorites}
+            setFavorites={setFavorites}
+          />}
+        />
         <Route path="/login" component={ () => 
           <Login
             mainLogin={mainLogin}
@@ -41,6 +51,9 @@ function App() {
             isLogged={isLogged}
             favorites={favorites}
             setFavorites={setFavorites}
+            storedComments={storedComments}
+            saveComment={saveComment}
+            setMovie={setMovie}
           />}
         />
         <Route path="/books" component={ () =>

@@ -1,12 +1,14 @@
 // Import React and CSS
 import React from 'react';
+import { useHistory } from "react-router";
 
 // Import Components and Pages
 
-const Movie = ({movie, toggleRenderDetails, setMovieOnDisplay, favorites, setFavorites}) => {
+const Movie = ({movie, favorites, setFavorites, setMovie}) => {
+  const history = useHistory();
   const handleClick = ({ target: {value} }) => {
-    setMovieOnDisplay(value);
-    toggleRenderDetails(true);
+    setMovie(value);
+    history.push('/details')
   }
 
   const handleFavorites = ({ target: {value} }) => {
