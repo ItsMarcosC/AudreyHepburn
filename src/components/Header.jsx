@@ -1,12 +1,26 @@
 import React from "react";
-// import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-function Header() {
-  return (
-    <div>
-      <h2>This is a Header</h2>
-    </div>
-  );
+function Header({displayName}) {
+  switch (displayName) {
+    case "":
+      return (
+      <div>
+      <h2>Welcome to the Audrey Hepburn Project</h2>
+      </div>
+      );
+    default:
+      return (
+        <div>
+          <h2>{`Hello ${displayName} `}</h2>
+        </div>
+      );
+  }
+  
 }
 
-export default Header;
+const mapStateToProps = (state) => ({
+  displayName: state.login.name,
+});
+
+export default connect(mapStateToProps)(Header);

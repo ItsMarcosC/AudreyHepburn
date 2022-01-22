@@ -1,9 +1,10 @@
 import { connect } from 'react-redux';
 import React, { useState, useEffect } from 'react';
 import { saveLogin } from '../redux/actions';
-import  { Redirect } from 'react-router-dom'
+import { useHistory } from "react-router";
 
-const Login = ({saveInfo}) => {
+const Login = ({saveInfo, displayName}) => {
+  const history = useHistory();
   const [typedInfo, setTypedInfo] = useState({ name:'', email:''});
   const [invalidInfo, toggleInvalidInfo] = useState(true);
 
@@ -32,6 +33,7 @@ const Login = ({saveInfo}) => {
   
   const submitButtonHandler = () => {
     saveInfo(typedInfo.name, typedInfo.email, true)
+    history.push('/')
   };
 
     return ( 
