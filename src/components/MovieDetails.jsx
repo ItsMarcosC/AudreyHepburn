@@ -1,11 +1,14 @@
 // Import React and CSS
-import React from 'react';
+import React, { useContext } from 'react';
 import { useHistory } from "react-router";
 
 // Import Components and Pages
+import FavoritesContext from '../context/FavoritesContext';
 
-const MovieDetails = ({movie, favorites, setFavorites, toggleRenderDetails}) => {
+const MovieDetails = ({movie}) => {
+  const { favorites, setFavorites } = useContext(FavoritesContext);
   const history = useHistory();
+  
   const handleClick = () => {
     history.push('/movies')
   }

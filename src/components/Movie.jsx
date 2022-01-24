@@ -1,15 +1,19 @@
 // Import React and CSS
 import React, { useContext } from 'react';
 import { useHistory } from "react-router";
+import { connect } from 'react-redux';
 
 // Import Components and Pages
 import FavoritesContext from '../context/FavoritesContext';
+import { setOnDisplay } from '../redux/actions';
 
-const Movie = ({movie, setMovie}) => {
+
+const Movie = ({movie, onDisplay}) => {
   const { favorites, setFavorites } = useContext(FavoritesContext);
   const history = useHistory();
+  
   const handleClick = ({ target: {value} }) => {
-    setMovie(value);
+    onDisplay(value);
     history.push('/MovieDetails')
   }
 
@@ -43,6 +47,8 @@ const Movie = ({movie, setMovie}) => {
   );
 }
 
-export default Movie;
+const mapDispatchToProps = (dispatch) => ({
+  onDisplay:(element) => dispatch(setOnDisplay(element))
+});
 
-  
+export default connect(null, mapDispatchToProps)(Movie);

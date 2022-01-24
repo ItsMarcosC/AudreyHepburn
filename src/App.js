@@ -20,8 +20,7 @@ import FavoritesProvider from './context/FavoritesProvider';
 function App() {
   const [selectedFilter, setFilter] = useState('All');
   const [storedComments, saveComment] = useState([]);
-  const [movieD, setMovie] = useState('');
-  
+
   return (
     <>
       <FavoritesProvider>
@@ -29,9 +28,7 @@ function App() {
         <Nav />
         <Switch>
         <Route path="/MovieDetails" component={ () =>
-            <Mdetails 
-              movie={movieD}
-            />}
+            <Mdetails/>}
           />
           <Route path="/login" component={ () => 
             <Login
@@ -41,7 +38,6 @@ function App() {
             <Movies
               storedComments={storedComments}
               saveComment={saveComment}
-              setMovie={setMovie}
             />}
           />
           <Route path="/books" component={ () =>

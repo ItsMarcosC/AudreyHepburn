@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { saveLogin } from '../redux/actions';
 import { useHistory } from "react-router";
 
-const Login = ({saveInfo, displayName}) => {
+const Login = ({saveInfo}) => {
   const history = useHistory();
   const [typedInfo, setTypedInfo] = useState({ name:'', email:''});
   const [invalidInfo, toggleInvalidInfo] = useState(true);

@@ -1,15 +1,15 @@
-import { SET_MOVIE_DISPLAY } from "../actions";
+import { SET_ON_DISPLAY} from "../actions";
 
 const INITIAL_STATE = {
-  movie: '',
+  onDisplay: '',
 }
 
 const onDisplayReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case SET_MOVIE_DISPLAY:
+    case SET_ON_DISPLAY:
       return {
         ...state,
-        movie: action.movie,
+        onDisplay: action.onDisplay,
       }
     default:
       return state;
