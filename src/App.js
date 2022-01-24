@@ -15,78 +15,54 @@ import Nav from './components/Nav'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Mdetails from './pages/Mdetails';
+import FavoritesProvider from './context/FavoritesProvider';
 
 function App() {
-  const [isLogged, toggleLogged] = useState(false);
   const [selectedFilter, setFilter] = useState('All');
-  const [favorites, setFavorites] = useState([]);
   const [storedComments, saveComment] = useState([]);
   const [movieD, setMovie] = useState('');
-  const [mainLogin] = useState({
-    login: 'Audrey',
-    password: 'Hepburn',
-  });
   
   return (
     <>
-      <Header />
-      <Nav />
-      <Switch>
-      <Route path="/MovieDetails" component={ () =>
-          <Mdetails 
-            movie={movieD}
-            favorites={favorites}
-            setFavorites={setFavorites}
-          />}
-        />
-        <Route path="/login" component={ () => 
-          <Login
-            mainLogin={mainLogin}
-            isLogged={isLogged}
-            toggleLogged={toggleLogged}
-          />}
-        />
-        <Route path="/movies" component={ () =>
-          <Movies
-            isLogged={isLogged}
-            favorites={favorites}
-            setFavorites={setFavorites}
-            storedComments={storedComments}
-            saveComment={saveComment}
-            setMovie={setMovie}
-          />}
-        />
-        <Route path="/books" component={ () =>
-          <Books
-            isLogged={isLogged}
-            favorites={favorites}
-            setFavorites={setFavorites}
-          />}
-        />
-        <Route path="/readlist" component={ () =>
-          <Readlist
-            isLogged={isLogged}
-            favorites={favorites}
-            setFavorites={setFavorites}
-          />}
-        />
-        <Route path="/favorites" component={ () =>
-          <Favorites
-            isLogged={isLogged}
-            favorites={favorites}
-            setFavorites={setFavorites}
-            selectedFilter={selectedFilter}
-            setFilter={setFilter}
-          />}
-        />
-        <Route exact path="/" component={ () => 
-          <Home
-            isLogged={isLogged}
-          />}
-        />
-        <Route path="*" component={NotFound}/>
-      </Switch>
-      <Footer />
+      <FavoritesProvider>
+        <Header />
+        <Nav />
+        <Switch>
+        <Route path="/MovieDetails" component={ () =>
+            <Mdetails 
+              movie={movieD}
+            />}
+          />
+          <Route path="/login" component={ () => 
+            <Login
+            />}
+          />
+          <Route path="/movies" component={ () =>
+            <Movies
+              storedComments={storedComments}
+              saveComment={saveComment}
+              setMovie={setMovie}
+            />}
+          />
+          <Route path="/books" component={ () =>
+            <Books/>}
+          />
+          <Route path="/readlist" component={ () =>
+            <Readlist/>}
+          />
+          <Route path="/favorites" component={ () =>
+            <Favorites
+              selectedFilter={selectedFilter}
+              setFilter={setFilter}
+            />}
+          />
+          <Route exact path="/" component={ () => 
+            <Home/>}
+          />
+          <Route path="*" component={NotFound}/>
+        </Switch>
+        <Footer />
+      </FavoritesProvider>
     </>
   );
 }

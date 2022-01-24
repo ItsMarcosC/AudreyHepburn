@@ -7,7 +7,7 @@ import  { Redirect } from 'react-router-dom'
 import AudreyMovies from '../data/data_movies';
 import Movie from '../components/Movie';
 
-const Movies = ({loginStatus, setFavorites, favorites, setMovie}) => {
+const Movies = ({loginStatus, setMovie}) => {
   const { movies } = AudreyMovies;
 
   switch (loginStatus) {
@@ -19,8 +19,6 @@ const Movies = ({loginStatus, setFavorites, favorites, setMovie}) => {
             <Movie 
               key={movie.id}
               movie={movie}
-              setFavorites={setFavorites}
-              favorites={favorites}
               setMovie={setMovie}
             />
           ))
