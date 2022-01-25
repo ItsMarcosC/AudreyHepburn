@@ -1,12 +1,19 @@
 // Import React and CSS
-import React from 'react';
+import React, { useContext } from 'react';
+import { useHistory } from "react-router";
+import { connect } from 'react-redux';
 
 // Import Components and Pages
+import FavoritesContext from '../context/FavoritesContext';
+import { setOnDisplay } from '../redux/actions';
 
-const Book = ({book, toggleRenderDetails, setBookOnDisplay, favorites, setFavorites}) => {
+const Book = ({book, onDisplay}) => {
+  const { favorites, setFavorites } = useContext(FavoritesContext);
+  const history = useHistory();
+
   const handleClick = ({ target: {value} }) => {
-    setBookOnDisplay(value);
-    toggleRenderDetails(true);
+    onDisplay(value);
+    history.push('/bookDetails')
   }
 
   const handleFavorites = ({ target: {value} }) => {
@@ -40,4 +47,8 @@ const Book = ({book, toggleRenderDetails, setBookOnDisplay, favorites, setFavori
   );
 }
 
-export default Book;
+const mapDispatchToProps = (dispatch) => ({
+  onDisplay:(element) => dispatch(setOnDisplay(element))
+});
+
+export default connect(null, mapDispatchToProps)(Book);

@@ -5,7 +5,7 @@ import { useHistory } from "react-router";
 // Import Components and Pages
 import FavoritesContext from '../context/FavoritesContext';
 
-const MovieDetails = ({movie}) => {
+const DisplayMovie = ({movie}) => {
   const { favorites, setFavorites } = useContext(FavoritesContext);
   const history = useHistory();
   
@@ -48,4 +48,4 @@ const MovieDetails = ({movie}) => {
   );
 }
 
-export default MovieDetails;
+export default DisplayMovie;

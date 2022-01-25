@@ -1,14 +1,18 @@
 // Import React and CSS
-import React from 'react';
+import React, { useContext } from 'react';
+import { useHistory } from "react-router";
 
 // Import Components and Pages
+import FavoritesContext from '../context/FavoritesContext';
 
-const BookDetails = ({ book, favorites, setFavorites, toggleRenderDetails}) => {
+const DisplayBook = ({book}) => {
+  const { favorites, setFavorites } = useContext(FavoritesContext);
+  const history = useHistory();
   
   const handleClick = () => {
-    toggleRenderDetails(false);
+    history.push('/books')
   }
-
+  
   const handleFavorites = ({ target: {value} }) => {
     const valid = favorites.filter((element) => element.id === value).length
     if (valid === 0) {
@@ -46,4 +50,4 @@ const BookDetails = ({ book, favorites, setFavorites, toggleRenderDetails}) => {
   );
 }
 
-export default BookDetails;
+export default DisplayBook;

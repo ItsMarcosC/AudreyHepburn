@@ -1,54 +1,32 @@
 // Import React and CSS
-import React, { useState } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
 import  { Redirect } from 'react-router-dom'
 
 // Import Components and Pages
 import AudreyBooks from '../data/data_books_about';
 import Book from '../components/Book';
-import BookDetails from '../components/BookDetails';
-import Comments from '../components/Comments';
 
-const Books = ({isLogged, setFavorites, favorites}) => {
-  const [renderDetails, toggleRenderDetails] = useState(false);
-  const [bookOnDisplay, setBookOnDisplay] = useState('');
+const Books = ({loginStatus}) => {
   const { booksAboutAudrey } = AudreyBooks;
   
-  switch (isLogged) {
+  switch (loginStatus) {
     case false:
       return <Redirect to='/login' />
     default:
-      if (renderDetails === false){
-        return (
-          booksAboutAudrey.map((book) => ( 
-            <Book 
-              key={book.id}
-              book={book}
-              toggleRenderDetails={toggleRenderDetails}
-              setBookOnDisplay={setBookOnDisplay}
-              setFavorites={setFavorites}
-              favorites={favorites}
-            />
-          ))
-        ); 
-      } else {
-        return (
-          booksAboutAudrey.filter((book) => book.id === bookOnDisplay)
-          .map((book) => (
-            <div key={book.id}>
-              <BookDetails    
-                book={book}
-                toggleRenderDetails={toggleRenderDetails}
-                setFavorites={setFavorites}
-                favorites={favorites}
-              />
-              <Comments 
-                source={book}
-              />
-            </div>
-          ))
-        );
-      }
-  }
+      return (
+        booksAboutAudrey.map((book) => ( 
+          <Book 
+            key={book.id}
+            book={book}
+          />
+        ))
+      ); 
+  } 
 }
 
-export default Books;
+const mapStateToProps = (state) => ({
+  loginStatus: state.login.isLogged,
+});
+
+export default connect(mapStateToProps)(Books);

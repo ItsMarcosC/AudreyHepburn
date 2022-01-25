@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 import './style/App.css';
 
 // Import Components and Pages
+import FavoritesProvider from './context/FavoritesProvider';
 import Home from './pages/Home'
 import Movies from './pages/Movies';
 import Books from './pages/Books';
@@ -14,8 +15,8 @@ import NotFound from './pages/404';
 import Nav from './components/Nav'
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Mdetails from './pages/Mdetails';
-import FavoritesProvider from './context/FavoritesProvider';
+import MovieDetails from './pages/MovieDetails';
+import BookDetails from './pages/BookDetails'
 
 function App() {
   const [selectedFilter, setFilter] = useState('All');
@@ -27,12 +28,14 @@ function App() {
         <Header />
         <Nav />
         <Switch>
-        <Route path="/MovieDetails" component={ () =>
-            <Mdetails/>}
+          <Route path="/bookDetails" component={ () =>
+            <BookDetails/>}
+          />
+          <Route path="/movieDetails" component={ () =>
+            <MovieDetails/>}
           />
           <Route path="/login" component={ () => 
-            <Login
-            />}
+            <Login/>}
           />
           <Route path="/movies" component={ () =>
             <Movies

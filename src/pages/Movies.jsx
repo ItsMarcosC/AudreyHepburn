@@ -7,24 +7,23 @@ import  { Redirect } from 'react-router-dom'
 import AudreyMovies from '../data/data_movies';
 import Movie from '../components/Movie';
 
-const Movies = ({loginStatus, setMovie}) => {
+const Movies = ({loginStatus}) => {
   const { movies } = AudreyMovies;
 
   switch (loginStatus) {
     case false:
       return <Redirect to='/login' />
     default:
-        return (
-          movies.map((movie) => ( 
-            <Movie 
-              key={movie.id}
-              movie={movie}
-              setMovie={setMovie}
-            />
-          ))
-        ); 
-      } 
-    }
+      return (
+        movies.map((movie) => ( 
+          <Movie 
+            key={movie.id}
+            movie={movie}
+          />
+        ))
+      ); 
+  } 
+}
 
 const mapStateToProps = (state) => ({
   loginStatus: state.login.isLogged,

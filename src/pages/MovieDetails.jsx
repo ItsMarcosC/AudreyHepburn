@@ -1,15 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import AudreyMovies from '../data/data_movies';
-import MovieDetails from '../components/MovieDetails';
+import DisplayMovie from '../components/DisplayMovie';
 
-const Mdetails = ({ onDisplay }) => {
+const MovieDetails = ({ onDisplay }) => {
   const { movies } = AudreyMovies;
   return (
     movies.filter((movie) => movie.id === onDisplay)
     .map((movie) => (
       <div key={movie.id}>
-        <MovieDetails 
+        <DisplayMovie 
           movie={movie}
         />
       </div>
@@ -21,4 +21,4 @@ const mapStateToProps = (state) => ({
   onDisplay: state.display.onDisplay,
 });
 
-export default connect(mapStateToProps)(Mdetails);
+export default connect(mapStateToProps)(MovieDetails);

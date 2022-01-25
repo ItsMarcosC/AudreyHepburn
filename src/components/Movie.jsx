@@ -14,7 +14,7 @@ const Movie = ({movie, onDisplay}) => {
   
   const handleClick = ({ target: {value} }) => {
     onDisplay(value);
-    history.push('/MovieDetails')
+    history.push('/movieDetails')
   }
 
   const handleFavorites = ({ target: {value} }) => {
