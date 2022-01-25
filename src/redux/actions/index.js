@@ -8,7 +8,8 @@ export const saveLogin = (name, email, isLogged) => ({
   email,
 });
 
-export const setOnDisplay = (onDisplay) => ({
+export const setOnDisplay = (onDisplay, bookType) => ({
   type: SET_ON_DISPLAY,
   onDisplay,
+  bookType,
 });

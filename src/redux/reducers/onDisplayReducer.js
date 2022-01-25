@@ -10,6 +10,7 @@ const onDisplayReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         onDisplay: action.onDisplay,
+        bookType: action.bookType,
       }
     default:
       return state;

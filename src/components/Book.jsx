@@ -12,7 +12,7 @@ const Book = ({book, onDisplay}) => {
   const history = useHistory();
 
   const handleClick = ({ target: {value} }) => {
-    onDisplay(value);
+    onDisplay(value, book.media);
     history.push('/bookDetails')
   }
 
@@ -48,7 +48,7 @@ const Book = ({book, onDisplay}) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  onDisplay:(element) => dispatch(setOnDisplay(element))
+  onDisplay:(element, bookType) => dispatch(setOnDisplay(element, bookType))
 });
 
 export default connect(null, mapDispatchToProps)(Book);
