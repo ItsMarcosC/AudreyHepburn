@@ -1,12 +1,17 @@
 // Import React and CSS
-import React from 'react';
+import React, { useContext } from 'react';
 
 // Import Components and Pages
+import FavoritesContext from '../context/FavoritesContext';
 
-const FavoriteCard = ({card, favorites, setFavorites}) => {
+const FavoriteCard = ({card }) => {
+  const { favorites, setFavorites, filteredFavorites, setFilteredFavorites } = useContext(FavoritesContext);
+  
   const handleClick = ({ target: {value} }) => {
-    setFavorites(favorites.filter((element) => element.id !== value))
-  }
+    setFavorites(favorites.filter((element) => element.id !== value));
+    setFilteredFavorites(filteredFavorites.filter((element) => element.id !== value));
+  };
+
   return (
     <div>
       <h2>{card.title}</h2>

@@ -19,7 +19,6 @@ import MovieDetails from './pages/MovieDetails';
 import BookDetails from './pages/BookDetails'
 
 function App() {
-  const [selectedFilter, setFilter] = useState('All');
   const [storedComments, saveComment] = useState([]);
 
   return (
@@ -50,10 +49,7 @@ function App() {
             <Readlist/>}
           />
           <Route path="/favorites" component={ () =>
-            <Favorites
-              selectedFilter={selectedFilter}
-              setFilter={setFilter}
-            />}
+            <Favorites/>}
           />
           <Route exact path="/" component={ () => 
             <Home/>}

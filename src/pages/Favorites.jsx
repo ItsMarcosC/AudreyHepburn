@@ -1,57 +1,40 @@
 // Import React and CSS
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
+import { connect } from 'react-redux';
 import  { Redirect } from 'react-router-dom';
 import FavoriteCard from '../components/FavoriteCard';
 
 // Import Components and Pages
+import FavoritesContext from '../context/FavoritesContext';
 import FilterMenu from '../components/FilterMenu';
 
-const Favorites = ({ isLogged, favorites, setFavorites, selectedFilter, setFilter}) => {
-  const [filteredFavorites, setFilteredFavorites] = useState([]);
+const Favorites = ({ loginStatus }) => {
+  const { filteredFavorites, favorites, setFilteredFavorites } = useContext(FavoritesContext);
 
   useEffect(() => {
-    filterHandler();
-  }, [selectedFilter]); 
+    setFilteredFavorites(favorites);
+  }, []);
 
-  const filterHandler = () => {
-    switch(selectedFilter){
-      case 'Movies':
-        setFilteredFavorites(favorites.filter(element => element.media === 'movie'))
-        break;
-      case 'Books':
-      setFilteredFavorites(favorites.filter(element => element.media === 'book'))
-      break;
-      case 'Readlist':
-        setFilteredFavorites(favorites.filter(element => element.media === 'audreyReadlist'))
-        break;
-      default:
-        setFilteredFavorites(favorites);
-        break;
-    }
-  }
-
-  switch (isLogged) {
+  switch (loginStatus) {
     case false:
       return <Redirect to="/login" />
     default:
       return (
         <div>
-        <FilterMenu 
-          setFilter={setFilter} 
-          selectedFilter={selectedFilter} 
-          setFilteredFavorites={setFilteredFavorites} 
-          favorites={favorites}
-        />
+        <FilterMenu/>
         {filteredFavorites.map((element) => (
           <FavoriteCard 
             key={element.id}
             card={element}
-            favorites={favorites}
-            setFavorites={setFavorites}
           />
         ))}
         </div>
       );
   } 
 }
-export default Favorites;
+
+const mapStateToProps = (state) => ({
+  loginStatus: state.login.isLogged,
+});
+
+export default connect(mapStateToProps)(Favorites);

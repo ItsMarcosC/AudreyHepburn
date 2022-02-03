@@ -1,7 +1,11 @@
 // Import React and CSS
-import React from 'react';
+import React, { useContext } from 'react';
 
-const FilterMenu = ({ setFilter }) => {
+// Import Components and Pages
+import FavoritesContext from '../context/FavoritesContext';
+
+const FilterMenu = () => {
+  const { setFilter } = useContext(FavoritesContext)
   const handleClick = ({ target: {value} }) => {
     setFilter(value);
   }
