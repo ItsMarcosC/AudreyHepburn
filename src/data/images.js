@@ -46,7 +46,7 @@ const lifeInPicturesCover = 'https://i.imgur.com/P2S54Ohm.jpg';
 const audreyTreasuresCover = 'https://i.imgur.com/Llq4Uq0m.jpg';
 const littleBookCover = 'https://i.imgur.com/i51fgRHm.jpg';
 
-// Import Cover Images for books of Audrey Hepburn Personal Readlist
+// Import Cover Images for books of Audrey Hepburn's Personal Readlist
 const diaryAnneCover = 'https://i.imgur.com/IoavVuVm.jpg';
 const secretGardenCover = 'https://i.imgur.com/WsUVlZjm.jpg';
 const jungleBookCover = 'https://i.imgur.com/6eXCUkEm.jpg';
