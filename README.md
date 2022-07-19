@@ -12,5 +12,10 @@ Atualmente o projeto conta com as principais funcionalidades implementadas, cont
 - ReactJS;
 - JavaScript;
 
+## Extensões e Bibliotecas
+- Redux;
+- crypto-js;
+- Redux-Devtools;
+
 ## Execução
 A instalação de todas as depêndencias do Projeto pode ser feita via "npm install" na pasta raiz. 
